@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9194A581B2C61AE00E4D916 /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9194A571B2C61AE00E4D916 /* dispatch.swift */; };
 		D9587C9E1B232A0D00629591 /* ToysBoxKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D9587C9D1B232A0D00629591 /* ToysBoxKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9587CA41B232A0D00629591 /* ToysBoxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9587C981B232A0D00629591 /* ToysBoxKit.framework */; };
 		D9587CAB1B232A0D00629591 /* ToysBoxKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9587CAA1B232A0D00629591 /* ToysBoxKitTests.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D9194A571B2C61AE00E4D916 /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
 		D9587C981B232A0D00629591 /* ToysBoxKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToysBoxKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9587C9C1B232A0D00629591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9587C9D1B232A0D00629591 /* ToysBoxKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToysBoxKit.h; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9194A561B2C612A00E4D916 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				D9194A571B2C61AE00E4D916 /* dispatch.swift */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
 		D9587C8E1B232A0D00629591 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		D9587CB41B232A2200629591 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D9194A561B2C612A00E4D916 /* GCD */,
 				D9587CB51B232A3F00629591 /* UIKit */,
 			);
 			path = src;
@@ -229,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9587CB91B232A7B00629591 /* InterfaceBuilderUtility.swift in Sources */,
+				D9194A581B2C61AE00E4D916 /* dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
