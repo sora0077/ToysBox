@@ -12,6 +12,7 @@
 		D9587CA41B232A0D00629591 /* ToysBoxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9587C981B232A0D00629591 /* ToysBoxKit.framework */; };
 		D9587CAB1B232A0D00629591 /* ToysBoxKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9587CAA1B232A0D00629591 /* ToysBoxKitTests.swift */; };
 		D9587CB91B232A7B00629591 /* InterfaceBuilderUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9587CB81B232A7B00629591 /* InterfaceBuilderUtility.swift */; };
+		D9EB35031B4D6F6B00CA9C57 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EB35021B4D6F6B00CA9C57 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		D9587CA91B232A0D00629591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9587CAA1B232A0D00629591 /* ToysBoxKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToysBoxKitTests.swift; sourceTree = "<group>"; };
 		D9587CB81B232A7B00629591 /* InterfaceBuilderUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderUtility.swift; sourceTree = "<group>"; };
+		D9EB35021B4D6F6B00CA9C57 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		D9587CB41B232A2200629591 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D9EB35011B4D6F3D00CA9C57 /* Utility */,
 				D9194A561B2C612A00E4D916 /* GCD */,
 				D9587CB51B232A3F00629591 /* UIKit */,
 			);
@@ -130,6 +133,14 @@
 				D9587CB81B232A7B00629591 /* InterfaceBuilderUtility.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D9EB35011B4D6F3D00CA9C57 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D9EB35021B4D6F6B00CA9C57 /* Notification.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +199,9 @@
 		D9587C8F1B232A0D00629591 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "林達也";
 				TargetAttributes = {
 					D9587C971B232A0D00629591 = {
@@ -241,6 +254,7 @@
 			files = (
 				D9587CB91B232A7B00629591 /* InterfaceBuilderUtility.swift in Sources */,
 				D9194A581B2C61AE00E4D916 /* dispatch.swift in Sources */,
+				D9EB35031B4D6F6B00CA9C57 /* Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +299,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -363,6 +378,7 @@
 				INFOPLIST_FILE = ToysBoxKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.sora0077.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -380,6 +396,7 @@
 				INFOPLIST_FILE = ToysBoxKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.sora0077.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -388,16 +405,14 @@
 		D9587CB21B232A0D00629591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ToysBoxKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.sora0077.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -405,12 +420,10 @@
 		D9587CB31B232A0D00629591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ToysBoxKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.sora0077.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

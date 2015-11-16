@@ -15,21 +15,39 @@ public protocol Storyboardable {
     
     static var storyboardIdentifier: String { get }
     static var storyboardName: String { get }
+    
+    static var storyboardBundle: NSBundle? { get }
+}
+
+public extension Storyboardable where Self: UIViewController {
+    
+    static var storyboardIdentifier: String {
+        return "\(self)"
+    }
+    
+    static var storyboardBundle: NSBundle? {
+        return nil
+    }
+    
+    static func instantiate() -> Self {
+        return from_storyboard(self)
+    }
 }
 
 /**
 load view controller from storyboard
 
-:param: clazz UIViewController class
+- parameter clazz: UIViewController class
 
-:returns: typed view controller
+- returns: typed view controller
 */
 public func from_storyboard<T: UIViewController where T: Storyboardable>(clazz: T.Type) -> T! {
     
     let identifier = T.storyboardIdentifier
     let name = T.storyboardName
+    let bundle = T.storyboardBundle
     
-    let storyboard = UIStoryboard(name: name, bundle: nil)
+    let storyboard = UIStoryboard(name: name, bundle: bundle)
     return storyboard.instantiateViewControllerWithIdentifier(identifier) as? T
 }
 
@@ -41,15 +59,26 @@ public protocol Xibable {
     static var xibName: String { get }
 }
 
+public extension Xibable where Self: UIView {
+    
+    static var xibName: String {
+        return "\(self)"
+    }
+    
+    static func instantiate(owner owner: AnyObject? = nil, options: [NSObject: AnyObject]? = nil, atIndex index: Int = 0) -> Self {
+        return from_xib(self, owner: owner, options: options, atIndex: index)
+    }
+}
+
 /**
 load view from xib
 
-:param: clazz   UIView class
-:param: owner   owner
-:param: options options
-:param: index   index
+- parameter clazz:   UIView class
+- parameter owner:   owner
+- parameter options: options
+- parameter index:   index
 
-:returns: typed view
+- returns: typed view
 */
 public func from_xib<T: AnyObject where T: Xibable>(clazz: T.Type, owner: AnyObject? = nil, options: [NSObject: AnyObject]? = nil, atIndex index: Int = 0) -> T! {
     
