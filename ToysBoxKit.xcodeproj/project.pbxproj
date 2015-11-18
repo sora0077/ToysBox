@@ -12,6 +12,7 @@
 		D9587CA41B232A0D00629591 /* ToysBoxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9587C981B232A0D00629591 /* ToysBoxKit.framework */; };
 		D9587CAB1B232A0D00629591 /* ToysBoxKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9587CAA1B232A0D00629591 /* ToysBoxKitTests.swift */; };
 		D9587CB91B232A7B00629591 /* InterfaceBuilderUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9587CB81B232A7B00629591 /* InterfaceBuilderUtility.swift */; };
+		D9A864791BFCCDF400C1912F /* InspectorLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A864781BFCCDF400C1912F /* InspectorLayerViewController.swift */; };
 		D9EB35031B4D6F6B00CA9C57 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EB35021B4D6F6B00CA9C57 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		D9587CA91B232A0D00629591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9587CAA1B232A0D00629591 /* ToysBoxKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToysBoxKitTests.swift; sourceTree = "<group>"; };
 		D9587CB81B232A7B00629591 /* InterfaceBuilderUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderUtility.swift; sourceTree = "<group>"; };
+		D9A864781BFCCDF400C1912F /* InspectorLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectorLayerViewController.swift; sourceTree = "<group>"; };
 		D9EB35021B4D6F6B00CA9C57 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,9 +132,18 @@
 		D9587CB51B232A3F00629591 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				D9A864771BFCC60500C1912F /* InspectorLayerView */,
 				D9587CB81B232A7B00629591 /* InterfaceBuilderUtility.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D9A864771BFCC60500C1912F /* InspectorLayerView */ = {
+			isa = PBXGroup;
+			children = (
+				D9A864781BFCCDF400C1912F /* InspectorLayerViewController.swift */,
+			);
+			path = InspectorLayerView;
 			sourceTree = "<group>";
 		};
 		D9EB35011B4D6F3D00CA9C57 /* Utility */ = {
@@ -252,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A864791BFCCDF400C1912F /* InspectorLayerViewController.swift in Sources */,
 				D9587CB91B232A7B00629591 /* InterfaceBuilderUtility.swift in Sources */,
 				D9194A581B2C61AE00E4D916 /* dispatch.swift in Sources */,
 				D9EB35031B4D6F6B00CA9C57 /* Notification.swift in Sources */,
